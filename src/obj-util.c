@@ -198,6 +198,7 @@ void flavor_init(void)
 
 		my_strcpy(buf, "\"", 2);
 		wordlen = randname_make(RANDNAME_SCROLL, 2, 8, end, 24, name_sections);
+		my_strcap(end);
 		while (titlelen + wordlen < (int)(sizeof(scroll_adj[0]) - 3)) {
 			end[wordlen] = ' ';
 			titlelen += wordlen + 1;
